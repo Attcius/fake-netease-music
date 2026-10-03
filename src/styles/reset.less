@@ -1,0 +1,67 @@
+// 基础样式重置
+// 只保留播放器布局必需的默认值，越少越好排查问题。
+//
+// 注意：本文件内不要写 @import '@/xxx.less' —— Less 编译器会把 @ 当成变量起始符，
+// 与 Vite 的 @ 路径别名冲突。需要引入其他文件时一律用相对路径。
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// 播放器为全屏布局，根节点撑满视口高度
+html,
+body,
+#root {
+  height: 100%;
+}

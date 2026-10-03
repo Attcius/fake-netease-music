@@ -1,0 +1,112 @@
+// 全局 Less 无作用域保护，类名统一加 discover- 前缀，避免与其他页面撞名。
+
+.discover-page {
+  padding: 24px 32px 48px;
+}
+
+// 轮播图占位
+.discover-banner {
+  margin-bottom: 40px;
+}
+
+.discover-banner-slide {
+  height: 220px;
+  border-radius: 8px;
+  // TODO: 替换为真实轮播图
+  background: linear-gradient(120deg, #ec4141 0%, #f76b6b 100%);
+}
+
+.discover-section {
+  margin-bottom: 48px;
+}
+
+.discover-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.discover-section-anchor {
+  width: 4px;
+  height: 24px;
+  border-radius: 2px;
+  background: var(--color-primary);
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.discover-grid-artist {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.discover-card {
+  cursor: pointer;
+
+  &:hover {
+    .discover-card-title {
+      color: var(--color-primary);
+    }
+
+    .discover-cover {
+      background: var(--color-border);
+    }
+  }
+}
+
+.discover-cover {
+  aspect-ratio: 1;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background: var(--color-bg-gray);
+  transition: background 0.2s;
+}
+
+.discover-card-title {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.discover-card-meta {
+  font-size: 12px;
+  color: var(--color-text-sub-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.discover-artist {
+  text-align: center;
+  cursor: pointer;
+
+  &:hover .discover-avatar {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.discover-avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: var(--color-bg-gray);
+}
+
+.discover-artist-name {
+  font-size: 14px;
+  color: var(--color-text);
+}
